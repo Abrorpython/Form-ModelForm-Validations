@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <form method="post" action="{% url 'main:post' %}">
+    {% csrf_token %}
+        {{ hiha | crispy }}
+    <button type="submit" class="btn btn-primary">Saqlash</button>
+    </form>
+{% endblock content %}
